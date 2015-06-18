@@ -1,0 +1,32 @@
+{
+  "name": "the-conference-landing",
+  "version": "1.0.0",
+  "description": "protype psd file to website",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiwonsis/TheConferenceLanding.git"
+  },
+  "keywords": [
+    "node",
+    "web",
+    "psd"
+  ],
+  "author": "Scott Moon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jiwonsis/TheConferenceLanding/issues"
+  },
+  "homepage": "https://github.com/jiwonsis/TheConferenceLanding#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-connect": "^2.2.0",
+    "gulp-if": "^1.2.5",
+    "gulp-minify-html": "^1.0.3",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.5",
+    "jquery": "^2.1.4"
+  }
+}
