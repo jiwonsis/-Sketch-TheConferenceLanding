@@ -1,0 +1,57 @@
+#auditorium {
+    position: relative;
+    @include container(100%);
+    width: 100%;
+    @include backImage('../images/auditorium.jpg');
+    background-attachment: fixed;
+    text-align: center;
+    position: relative;
+    .auditorium__container {
+    	@include center(true, true);
+        @include container(35%);
+        background-color: $white;
+        padding: 20px 180px;
+        
+
+        
+        .auditorium__icon {
+            margin-bottom: 20px;
+            @include font-size(40px);
+            display: block;
+        } // auditorium__icon
+        .auditorium__title {
+			margin-bottom: 20px;
+
+            h3 {
+                @include font-size(19px);
+                font-family: 'Montserrat-Regular';
+                text-transform: uppercase;
+            } // h3
+            
+            span {
+            	@include font-size(13px);
+            	font-style: italic;
+            	text-transform: capitalize;
+            	color: $lightgrey;
+				margin-top: 5px;
+				display: block;            	
+            }
+        } // auditorium__title
+
+        .auditorium__address {
+        	margin-bottom: 20px;
+        	@include font-size(16px);
+        	font-style: italic;
+        }
+
+        .auditorium__call {
+        	margin-bottom: 20px;
+        	@include font-size(14px);
+        }
+
+        .auditorium__email {
+        	margin-bottom: 20px;
+        	@include font-size(12px);
+        }
+    }
+}

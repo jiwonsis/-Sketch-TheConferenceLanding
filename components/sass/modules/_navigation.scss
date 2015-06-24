@@ -1,0 +1,65 @@
+#navigation {
+    position: relative;
+    padding: 0;
+    background-color: $comet;
+    // @include backImage('../images/auditorium.jpg');
+    nav {
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100%;
+        margin-bottom: 15px;
+        z-index: 1040;
+        background-color: transparent;
+        border-top: 1px solid transparent;
+         @include transition(all 0.3s ease-in-out);
+        .navigation__container {
+            @include container(90%);
+            margin: 0 auto;
+            ul {
+                margin: 15px 0;
+                margin-top: 35px;
+                float: right;
+                display: block;
+                li {
+                    float: left;
+                    position: relative;
+                    display: block;
+                    a {
+                        font-family: 'Montserrat-Regular';
+                        @include font-size(14px);
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        display: block;
+                        color: $white;
+                        padding: 7px 0;
+                        margin: 0 13px;
+                        border-bottom: 1px solid transparent;
+                       
+                        &.active, &:hover {
+                            border-bottom-color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.ableBg {
+        nav {
+            // background-color: rgba($white, 0.9);
+            @include background-opacity($white, 0.9);
+            ul {
+                margin-top: 15px;
+                li {
+                    a {
+                        color: $dark;
+                        &.active, &:hover {
+                            border-bottom-color: $dark;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

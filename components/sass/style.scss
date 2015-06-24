@@ -1,4 +1,39 @@
-//Compass imports
+//COMPASS PART
 @import "compass";
-
 @import "compass/reset";
+@import "compass/css3/box-shadow";
+@import "compass/css3/text-shadow";
+@import 'compass/css3/filter';
+@import "compass/css3/flexbox";
+@import "compass/css3/transition";
+@import "compass/support";
+
+
+//External Libraries
+@import "susy";
+@import "breakpoint";
+@import "normalize";
+
+
+//BASE PART
+@import "base/variables";
+@import "base/mixins";
+@import "base/base";
+@import "base/grids";
+@import "base/layout";
+
+
+//MODULE PART
+@import "modules/buttons";
+@import "modules/responsive";
+@import "modules/typography";
+@import "modules/navigation";
+@import "modules/hero";
+@import "modules/speakers";
+@import "modules/speakersList";
+@import "modules/agenda";
+@import "modules/auditorium";
+@import "modules/sposors";
+@import "modules/register";
+@import "modules/footer";
+@import "modules/loading";

@@ -1,0 +1,111 @@
+#speakersList {
+    .speakersList__container {
+        background-color: $white;
+        @include container(100%);
+        .speakersList__container__main {
+            text-align: center;
+            position: relative;
+            display: block;
+        } // speakersList__container__main
+        .speakersList__container__sub {
+            @include span(1 of 2);
+            padding: 0;
+            text-align: center;
+            position: relative;
+            display: block;
+        } // speakersList__container__sub
+        .speakers__pic {
+            @include span(1 of 2);
+            padding: 0;
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            } // img
+        } // speakers__pic
+        .speakers__desc {
+            display: table;
+            position: relative;
+            @include span(1 of 2);
+            .speakers__desc__content {
+                display: table-cell;
+                vertical-align: middle;
+                @include container(50%);
+                h1 {
+                    font-family: 'Montserrat-Regular';
+                    @include font-size(19px);
+                    text-transform: uppercase;
+                    margin-bottom: 20px;
+                } // h1
+                p {
+                    margin-bottom: 10px;
+                } // p
+                ul {
+                    display: inline-block;
+                    padding: 18px 20px;
+                    border-top: 1px solid $dark;
+                    @include font-size(20px);
+                    li {
+                        padding: 0 5px;
+                        a {
+                            color: $dark;
+                            &:hover {
+                                color: $white;
+                            } // a:hover
+                        } // a 
+                    } // li
+                } // ul
+                .arrow {
+                    content: " ";
+                    position: absolute;
+                    opacity: 0;
+                    color: $casper;
+                    z-index: 10;
+                    top: 50%;
+                    margin-top: -15px;
+                    width: 0;
+                    height: 0;
+                    border: 15px solid transparent;
+                    @include rotateY(90);
+                    @include transform-origin(center, center);
+                    @include transition(opacity .3s, transform .3s);
+                    
+                    &.left {
+                    	left: -15px;
+                    	border-right-color: currentColor;
+                        border-left-width: 0;
+                        border-right-width: 15px;
+                        right: -15px;
+                    }
+                    
+                    &.right {
+                        border-left-color: currentColor;
+                        border-right-width: 0;
+                        border-left-width: 15px;
+                        right: -15px;
+                    }
+                }
+                &.active {
+                    .arrow {
+                        // @include rotate(45deg);
+                        opacity: 1;
+                        @include rotateY(0);
+                    }
+                }
+            } // speakers__desc__content
+            @include transition(all 0.3s ease-in-out);
+            &.active {
+                background-color: $casper;
+            }
+        } // speakers__desc
+        &:nth-child(2n + 3) {
+            .speakers__pic, .speakers__desc {
+                @include span ( 1 of 2 last);
+            }
+
+            .speakers__pic {
+            	padding: 0 !important;
+            }
+        }
+    } // speakersList__container
+} // speakersList

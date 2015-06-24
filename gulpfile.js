@@ -6,8 +6,9 @@ var gulp = require('gulp'),
     gulpif = require('gulp-if'),
     uglify = require('gulp-uglify'),
     minifyHTML = require('gulp-minify-html'),
-    concat = require('gulp-concat');
-path = require('path');
+    concat = require('gulp-concat'),
+    path = require('path'),
+    fontcustom = require('gulp-fontcustom');
 
 var env,
     jsSources,
@@ -27,12 +28,15 @@ if (env === 'development') {
 }
 
 jsSources = [
-	'components/scripts/jqloader.js',
+    'components/scripts/jqloader.js',
     'components/scripts/script.js'
 
 ];
+
+fontSources = ['components/fonts/**/*'];
 sassSources = ['components/sass/style.scss'];
 htmlSources = [outputDir + '*.html'];
+iconSources = ['components/svg/**/*'];
 
 gulp.task('js', function() {
     gulp.src(jsSources)
@@ -58,10 +62,28 @@ gulp.task('compass', function() {
         .pipe(connect.reload())
 });
 
+gulp.task('fonts', function() {
+    gulp.src(fontSources)
+        .on('error', gutil.log)
+        .pipe(gulp.dest(outputDir + 'fonts'))
+        .pipe(connect.reload())
+});
+
+gulp.task('fontcustom', function() {
+    gulp.src(iconSources)
+        .pipe(fontcustom({
+            font_name: 'iconfont'
+        }))
+        .pipe(gulp.dest(outputDir + 'fonts/iconfont'))
+});
+
+
 gulp.task('watch', function() {
     gulp.watch(jsSources, ['js']);
     gulp.watch(['components/sass/*.scss', 'components/sass/*/*.scss'], ['compass']);
     gulp.watch('builds/development/*.html', ['html']);
+    gulp.watch(fontSources, ['fonts']);
+    gulp.watch(fontSources, ['fontcustom']);
 });
 
 gulp.task('connect', function() {
@@ -84,4 +106,4 @@ gulp.task('move', function() {
         .pipe(gulpif(env === 'production', gulp.dest(outputDir + 'images')))
 });
 
-gulp.task('default', ['watch', 'html', 'js', 'compass', 'move', 'connect']);
+gulp.task('default', ['watch', 'html', 'js', 'compass', 'fonts', 'fontcustom', 'move', 'connect']);
