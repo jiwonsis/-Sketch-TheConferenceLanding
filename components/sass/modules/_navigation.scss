@@ -1,0 +1,161 @@
+#navigation {
+    @include clearfix;
+    position: relative;
+    padding: 0;
+    background-color: $comet;
+    display: block;
+    nav.navigation__bar {
+        @include clearfix;
+        @include breakpoint((max-width 767px)) {
+            position: relative;
+            margin-bottom: 0;
+            max-height: 0;
+            min-height: 0;
+            z-index: 90;
+            padding-right: 28px;
+            display: block;
+            @include transition(max-height 250ms linear);
+            
+            &.navigation__bar--open {
+                max-height:700px;
+            }
+
+        } // breakpoint
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100%;
+        overflow:hidden;
+        margin: auto;
+        margin-bottom: 15px;
+        z-index: 1040;
+        background-color: transparent;
+        border-top: 1px solid transparent;
+        @include transition(all 0.3s ease-in-out);
+        .navigation__container {
+            @include clearfix;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            ul {
+                @include clearfix;
+                margin: 15px 0;
+                margin-top: 35px;
+                float: right;
+                display: block;
+                @include breakpoint((max-width: 767px)) {
+                    float: none;
+                    text-align: center;
+                }
+
+                li {
+                    @include breakpoint((max-width: 767px)) {
+                        float: none;
+                    }
+                    float: left;
+                    position: relative;
+                    display: block;
+                    a {
+                        font-family: 'Montserrat-Regular';
+                        @include font-size(14px);
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        display: block;
+                        color: $white;
+                        padding: 7px 0;
+                        margin: 0 13px;
+                        border-bottom: 1px solid transparent;
+                        &.active, &:hover {
+                            border-bottom-color: $white;
+                        } //&.active, &:hover
+                    } // a
+                } // li 
+            } // ul
+        } // navigation__container
+    } // nav
+    &.ableBg {
+        nav {
+            // background-color: rgba($white, 0.9);
+            @include background-opacity($white, 0.9);
+            ul {
+                margin-top: 15px;
+                li {
+                    a {
+                        color: $dark;
+                        &.active, &:hover {
+                            border-bottom-color: $dark;
+                        } // &.active, &:hover
+                    } // a
+                } // li
+            } // ul
+        }
+    }
+    .navigation__button {
+        @include breakpoint((min-width 767px)) {
+            display: none;
+        } // breakpoint
+        display: inline-block;
+        padding: 10px 5px;
+        @include transition(.3s);
+        cursor: pointer;
+        @include user-select(none);
+        background: none;
+        border: none;
+        position: absolute;
+        z-index: 99;
+        top: 8px;
+        right: 5px;
+        color: $white;
+        &:focus,
+        &:active {
+            outline: none;
+        } // focus
+        .lines {
+            display: inline-block;
+            width: 20px;
+            height: 2px;
+            background: currentColor;
+            position: relative;
+            @include transition(background 150ms 250ms ease);
+            // line 1 and other css setting
+            &:before, &:after {
+                display: inline-block;
+                width: 20px;
+                height: 2px;
+                background: currentColor;
+                position: absolute;
+                left: 0;
+                content: '';
+                @include transform-origin(50% 50%);
+                @include transition(top 150ms 250ms ease, transform 150ms ease);
+            }
+            // line 2
+            &:before {
+                top: 5px;
+            }
+            // line 3
+            &:after {
+                top: -5px;
+            }
+        } // lines
+        // open
+        &.open {
+            .lines {
+                background: transparent;
+                &:before, &:after {
+                    @include transition(top 250ms ease, transform 150ms 250ms ease);
+                    top: 0;
+                    width: 20px;
+                }
+                &:before {
+                    @include rotate3d(0, 0, 1, 45deg);
+                }
+                &:after {
+                    @include rotate3d(0, 0, 1, -45deg);
+                }
+            }
+        }
+    }
+}

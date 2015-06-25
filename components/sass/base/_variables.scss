@@ -1,0 +1,55 @@
+// susy global setting
+$susy : (
+  columns: 12,
+  container: 60em,
+  gutters: 1/4,
+  gutter-position: inside
+);
+
+// Color variables
+$dark: #141316;
+$yellow: #efd645;
+$green: #92e1b2;
+$red: #ff4e57;
+
+$white: #fff;
+$iceberg: #cbf1f1;      // $accent-color-1: #cbf1f1;
+$casper: #b0bacf;       // $accent-color-2: #b0bacf;
+$serenade: #fff1e2;     // $accent-color-3: #fff1e2;
+$grey: #464646;
+$dark-grey: #252525;
+$gothic: #70b6d0;       // $blue: #6e96a2;
+$comet: #7866b0;        // $purple: #585776;
+$terracotta: #ff7a6b;   // $orange: #e87e66;
+$lightgrey: #8c8c8c;
+
+// Colors list
+$colors: 
+  "iceberg" $iceberg,
+  "casper" $casper,
+  "serenade" $serenade,
+  "gothic" $gothic,
+  "comet" $comet,
+  "terracotta" $terracotta,
+  "white" $white,
+  "dark-grey" $dark-grey,
+  "grey" $grey;
+
+// Bootstrap buttons colors list
+$bs-btns: 
+    "default" #fff,
+    "primary" #337ab7,
+    "success" #5cb85c,
+    "info" #5bc0de,
+    "warning" #f0ad4e,
+    "danger" #d9534f;
+
+
+// Create a new list based on $colors for Components
+
+$color-list:();
+$color-list: join($colors, $bs-btns, comma);
+
+
+
+

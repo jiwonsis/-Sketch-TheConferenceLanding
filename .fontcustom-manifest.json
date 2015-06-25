@@ -1,0 +1,90 @@
+{
+  "checksum": {
+    "previous": "14d63851f8452f424c2a3cd680f0805cc42fd9e0b15a342ddbbed8c535f4216b",
+    "current": "14d63851f8452f424c2a3cd680f0805cc42fd9e0b15a342ddbbed8c535f4216b"
+  },
+  "fonts": [
+    "./___tmp___/iconfont.ttf",
+    "./___tmp___/iconfont.svg",
+    "./___tmp___/iconfont.woff",
+    "./___tmp___/iconfont.eot"
+  ],
+  "glyphs": {
+    "agenda": {
+      "codepoint": 61696,
+      "source": "/Users/scottmoon/Desktop/Web-Dev/tutoring/self/TheConferenceLanding/components/svg/agenda.svg"
+    },
+    "auditorium-marker": {
+      "codepoint": 61697,
+      "source": "/Users/scottmoon/Desktop/Web-Dev/tutoring/self/TheConferenceLanding/components/svg/auditorium-marker.svg"
+    },
+    "close": {
+      "codepoint": 61706,
+      "source": "/Users/scottmoon/Desktop/Web-Dev/tutoring/self/TheConferenceLanding/components/svg/close.svg"
+    },
+    "conference-talk": {
+      "codepoint": 61698,
+      "source": "/Users/scottmoon/Desktop/Web-Dev/tutoring/self/TheConferenceLanding/components/svg/conference-talk.svg"
+    },
+    "facebook": {
+      "codepoint": 61699,
+      "source": "/Users/scottmoon/Desktop/Web-Dev/tutoring/self/TheConferenceLanding/components/svg/facebook.svg"
+    },
+    "kakao-story": {
+      "codepoint": 61700,
+      "source": "/Users/scottmoon/Desktop/Web-Dev/tutoring/self/TheConferenceLanding/components/svg/kakao-story.svg"
+    },
+    "mail": {
+      "codepoint": 61701,
+      "source": "/Users/scottmoon/Desktop/Web-Dev/tutoring/self/TheConferenceLanding/components/svg/mail.svg"
+    },
+    "menu": {
+      "codepoint": 61702,
+      "source": "/Users/scottmoon/Desktop/Web-Dev/tutoring/self/TheConferenceLanding/components/svg/menu.svg"
+    },
+    "mic": {
+      "codepoint": 61703,
+      "source": "/Users/scottmoon/Desktop/Web-Dev/tutoring/self/TheConferenceLanding/components/svg/mic.svg"
+    },
+    "sponsors": {
+      "codepoint": 61704,
+      "source": "/Users/scottmoon/Desktop/Web-Dev/tutoring/self/TheConferenceLanding/components/svg/sponsors.svg"
+    },
+    "twitter": {
+      "codepoint": 61705,
+      "source": "/Users/scottmoon/Desktop/Web-Dev/tutoring/self/TheConferenceLanding/components/svg/twitter.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": false,
+    "css_selector": ".icon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "iconfont",
+    "force": true,
+    "input": {
+      "templates": "/Users/scottmoon/Desktop/Web-Dev/tutoring/self/TheConferenceLanding/components/svg",
+      "vectors": "/Users/scottmoon/Desktop/Web-Dev/tutoring/self/TheConferenceLanding/components/svg"
+    },
+    "no_hash": true,
+    "output": {
+      "css": "./___tmp___",
+      "fonts": "./___tmp___",
+      "preview": "./___tmp___"
+    },
+    "preprocessor_path": null,
+    "quiet": false,
+    "templates": [
+      "css",
+      "preview"
+    ]
+  },
+  "templates": [
+    "./___tmp___/iconfont.css",
+    "./___tmp___/iconfont-preview.html"
+  ]
+}

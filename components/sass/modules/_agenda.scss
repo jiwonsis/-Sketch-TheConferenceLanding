@@ -1,0 +1,116 @@
+#agenda {
+    @include clearfix;
+    position: relative;
+    background-color: $white;
+    @include container(100%);
+    text-align: center;
+    padding: 0px 15px;
+    .agenda__title {
+        @include container(55%);
+        text-align: center;
+        padding: 0;
+        padding-top: 50px;
+        .agenda__icon {
+            margin-bottom: 15px;
+            i {
+                @include font-size(40px);
+            }
+        }
+        h1 {
+            font-family: 'Montserrat-Regular';
+            @include font-size(19px);
+            text-transform: uppercase;
+            margin-bottom: 0px;
+        }
+        span {
+            @include font-size(13px);
+            font-style: italic;
+            color: $lightgrey;
+            font-family: 'Montserrat-Regular';
+            margin-bottom: 10px;
+            text-transform: capitalize;
+        }
+        h2 {
+            text-transform: uppercase;
+            @include font-size(23px);
+            line-height: 120%;
+            margin: 20px 0;
+            font-family: 'Montserrat-Regular';
+            font-weight: 500;
+        }
+    } // agenda__title
+    ul.timeline {
+        margin: 40px 0;
+        padding: 0;
+        padding-bottom: 30px;
+        display: block;
+        position: relative;
+        li {
+            margin-bottom: 50px;
+            display: list-item;
+            text-align: center;
+            @include clearfix;
+            @include container(100%);
+            span {
+                @include span(1 of 2);
+                padding: 22px 16px 0 0;
+                position: relative;
+                @include font-size(20px);
+                text-align: right;
+                font-family: 'Montserrat-Regular';
+            } // span
+            .content {
+                @include span(1 of 2 last);
+                position: relative;
+                text-align: left;
+                padding: 0;
+                display: inline-block;
+                h3 {
+                    @include font-size(16px);
+                    padding: 28px 18px;
+                    border: 1px solid currentColor;
+                    display: inline-block;
+                    &:after {
+                        content: " ";
+                        width: 1px;
+                        height: 28px;
+                        position: absolute;
+                        left: 0;
+                        bottom: -40px;
+                        background-color: $dark;
+                    } // after
+                } // h3
+                i {
+                    @include font-size(40px);
+                    margin-right: 10px;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            } // content
+            &.timeline-featured {
+                .content {
+                    padding: 10px 20px 30px 20px;
+                    background-color: $grey;
+                    color: $white;
+                    h3 {
+                        border: none;
+                        padding: 10px 0;
+                    }
+                    p {
+                        @include font-size(14px);
+                    }
+                } // content
+            } // li.timeline-featured
+        } // li
+        &:after {
+            content: " ";
+            width: 9px;
+            height: 9px;
+            position: absolute;
+            left: 50%;
+            margin-left: -4px;
+            bottom: 0;
+            background-color: currentColor;
+        }
+    } // ul.timeline
+}

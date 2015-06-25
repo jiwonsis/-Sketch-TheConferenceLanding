@@ -1,0 +1,132 @@
+#hero {
+    @include backImage('../images/sl_03.jpg');
+    background-attachment: fixed;
+    background-position: static;
+    display: block;
+    
+    @include breakpoint((max-width: 991px)) {
+        min-height: 853px;
+    }
+
+     @include breakpoint((max-width: 767px)) {
+        min-height: 100%;
+    }
+    min-height: 853px;
+    
+    .hero__container {
+        color: $white;
+        @include breakpoint((max-width: 991px)) {
+            padding-top: 130px;
+            width: 60%;
+        }
+        @include breakpoint((max-width: 767px)) {
+            padding: 80px 0;
+            width: 100%;
+            text-align: center;
+        }
+        padding-top: 160px;
+        padding-left: 20px;
+        width: 50%;
+        text-align: left;
+        .hero__title {
+            padding: 0 20px;
+            h1 {
+                display: block;
+                @include font-size(74px);
+                font-family: 'LoveloBlack-Regular';
+                text-transform: uppercase;
+                margin: 0;
+                @include breakpoint((max-width:480px)) {
+                    @include font-size(40px);
+                }
+            }
+            h2 {
+                @include font-size(23px);
+                font-family: 'Montserrat-Regular';
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                @include breakpoint((max-width:480px)) {
+                    @include font-size(18px);
+                }
+            }
+        }
+        .hero__content {
+            padding: 0 20px;
+            p {
+                @include font-size(20px);
+                
+                @include breakpoint((max-width:480px)) {
+                    @include font-size(16px);
+                }
+            }
+            margin-bottom: 20px;
+            hr {
+                @include breakpoint((max-width: 767px)) {
+                    margin: 20px auto;
+                }
+            }
+        }
+        ul.hero__sociallink {
+            padding: 0 20px;
+            @include font-size(20px);
+            li {
+                display: inline-block;
+                padding: 0 3px;
+                vertical-align: middle;
+                a {
+                    color: $comet;
+                    display: block;
+                    background-color: $white;
+                    padding: 6px;
+                    @include border-radius(100%);
+                }
+            }
+        }
+        .hero__button {
+            margin: 30px 0;
+            padding: 0 20px;
+            display: block;
+            a {
+                display: inline-block;
+                text-decoration: none;
+                @include font-size(18px);
+                font-family: 'Montserrat-Regular';
+                text-transform: uppercase;
+                border: 1px solid $white;
+                color: $white;
+                padding: 24px;
+                @include transition(ease-in-out, .3s);
+                &:hover {
+                    background-color: $white;
+                    color: $comet;
+                }
+            }
+        }
+        @include breakpoint((max-width 768px)) {}
+    }
+}
+
+.hero__container--header {
+    h1 {
+        display: block;
+        @include font-size(74px);
+        font-family: 'LoveloBlack-Regular';
+        text-transform: uppercase;
+        margin: 0;
+    }
+    h2 {
+        @include font-size(23px);
+        font-family: 'Montserrat-Regular';
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+}
+
+.hero__container--content {
+    @include font-size(20px);
+    line-height: 150%;
+    margin-bottom: 20px;
+    p {
+        margin-bottom: 20px;
+    } // p
+}

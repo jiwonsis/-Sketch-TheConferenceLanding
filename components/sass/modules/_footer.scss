@@ -1,0 +1,9 @@
+footer {
+	text-align: center;
+	background-color: $grey;
+	color: $white;
+	
+	@include font-size(18px);
+	
+	padding: 20px 0;
+}
