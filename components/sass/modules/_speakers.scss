@@ -5,7 +5,11 @@
 	@include container(100%);
 	
 	.speakers__title {
-		@include container(55%);
+		@include container(80%);
+		
+		@include breakpoint(490){
+			@include container(55%);
+		}
 		text-align: center;
 		padding: 50px 0;
 		

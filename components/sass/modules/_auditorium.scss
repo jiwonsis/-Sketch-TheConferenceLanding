@@ -3,6 +3,10 @@
     @include container(100%);
     width: 100%;
     @include backImage('../images/auditorium.jpg');
+    // iOS background-attachment Fixed not working.. so, change scrolling
+    @media screen and (max-device-width: 1024px){
+        background-attachment: scroll;
+    }
     background-attachment: fixed;
     text-align: center;
     position: static;

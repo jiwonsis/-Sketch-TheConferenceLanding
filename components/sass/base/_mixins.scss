@@ -23,6 +23,11 @@
     background-repeat: no-repeat;
     background-position: $bgPos;
     @include background-size(cover);
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=$image, sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=$image, sizingMethod='scale')";
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
 } // backImage
 
 

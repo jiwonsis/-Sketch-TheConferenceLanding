@@ -1,5 +1,10 @@
 #hero {
     @include backImage('../images/sl_03.jpg');
+    // iOS background-attachment Fixed not working.. so, change scrolling
+    @media screen and (max-device-width: 1024px){
+        background-attachment: scroll;
+        @include backImage('../images/sl_03.jpg', to bottom, 0, .4, center center);
+    }
     background-attachment: fixed;
     background-position: static;
     display: block;

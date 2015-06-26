@@ -599,6 +599,11 @@ blockquote footer:before, blockquote small:before, blockquote .small:before {
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=$image, sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=$image, sizingMethod='scale')";
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
   background-attachment: fixed;
   background-position: static;
   display: block;
@@ -1168,6 +1173,11 @@ blockquote footer:before, blockquote small:before, blockquote .small:before {
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=$image, sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=$image, sizingMethod='scale')";
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
   background-attachment: fixed;
   text-align: center;
   position: static;
